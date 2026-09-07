@@ -39680,10 +39680,10 @@ with self;
 
   ZonemasterEngine = buildPerlPackage {
     pname = "Zonemaster-Engine";
-    version = "8.1.1";
+    version = "9.0.0";
     src = fetchurl {
-      url = "mirror://cpan/authors/id/Z/ZN/ZNMSTR/Zonemaster-Engine-v8.1.1.tar.gz";
-      hash = "sha256-QlQQ+saL++8A1MW9dqMRzDNH6cydyQl9HB3cXanudGI=";
+      url = "mirror://cpan/authors/id/Z/ZN/ZNMSTR/Zonemaster-Engine-v9.0.0.tar.gz";
+      hash = "sha256-9J07VHNQF3AQA/9VeaVjcIZbZyB3wu/yoDDUT0HJgFU=";
     };
     buildInputs = [
       LocalePO
@@ -39696,6 +39696,7 @@ with self;
       TestPod
     ];
     propagatedBuildInputs = [
+      CBORXS
       ClassAccessor
       Clone
       EmailValid
@@ -39711,13 +39712,12 @@ with self;
       NetIPXS
       Readonly
       TextCSV
-      ZonemasterLDNS
       YAMLLibYAML
+      ZonemasterLDNS
       libintl-perl
     ];
-
     meta = {
-      description = "Tool to check the quality of a DNS zone";
+      description = "A tool to check the quality of a DNS zone";
       license = lib.licenses.bsd3;
     };
   };
