@@ -4409,6 +4409,25 @@ with self;
     };
   };
 
+  CBORXS = buildPerlPackage {
+    pname = "CBOR-XS";
+    version = "1.87";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/M/ML/MLEHMANN/CBOR-XS-1.87.tar.gz";
+      hash = "sha256-6sFecwqvYS7dnt9x5qqVRlNhG65aEEO5YK/1qbHlcf8=";
+    };
+    buildInputs = [
+      CanaryStability
+      TaskWeaken
+    ];
+    propagatedBuildInputs = [
+      TypesSerialiser
+      commonsense
+    ];
+    meta = {
+    };
+  };
+
   CDDB_get = buildPerlPackage {
     pname = "CDDB_get";
     version = "2.28";
